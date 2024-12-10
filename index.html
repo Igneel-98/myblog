@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Siddheswar's Blog</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./assets/css/fontAwesome.css">
+        <link rel="stylesheet" href="./assets/css/hero-slider.css">
+        <link rel="stylesheet" href="./assets/css/templatemo-main.css">
+        <link rel="stylesheet" href="./assets/css/owl-carousel.css">
+
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+        
+        <script src="./assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    </head>
+
+<body>
+
+    <div class="fixed-side-navbar">
+        <ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link" href="#home"><span>Home</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#writeups"><span>Writeups</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#motivation"><span>Motivation</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#about-me"><span>About Me</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact-us"><span>Contact</span></a></li>
+        </ul>
+    </div>
+
+    <div class="parallax-content baner-content" id="home">
+        <div class="container">
+           
+           <!-- partial:index.partial.html -->
+    <script type="x-shader/x-vertex" id="vertexshader">
+
+    attribute float size;
+    attribute vec3 customColor;
+    varying vec3 vColor;
+  
+    void main() {
+  
+      vColor = customColor;
+      vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
+      gl_PointSize = size * ( 300.0 / -mvPosition.z );
+      gl_Position = projectionMatrix * mvPosition;
+  
+    }
+  
+  </script>
+  <script type="x-shader/x-fragment" id="fragmentshader">
+  
+   uniform vec3 color;
+   uniform sampler2D pointTexture;
+  
+   varying vec3 vColor;
+  
+   void main() {
+  
+     gl_FragColor = vec4( color * vColor, 1.0 );
+     gl_FragColor = gl_FragColor * texture2D( pointTexture, gl_PointCoord );
+  
+   }
+  </script>
+  
+  <div id="magic"></div>
+  <div class="playground">
+    <div class="bottomPosition">
+        <div class="second-button">
+            <a href="#about-me">About Me</a>
+        </div> 
+        
+          
+    </div>
+  </div>
+  <!-- partial -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r125/three.min.js'></script><script  src="./assets/js/home.js"></script>
+           
+            
+        </div>
+    </div>
+
+
+    <div class="service-content" id="writeups">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="left-text">
+                        <h4>CTF Writeups</h4>
+                        <div class="line-dec"></div>
+                        <p>If you are here you must know what you are doing. Incase you dont't know what is CTF let me tell you. 
+                           <br> <br>Capture The Flags, or CTFs, are a kind of computer security competition. Teams of competitors (or just individuals) are pitted against each other in a test of computer security skill.  
+                        If you want to know more in details, then click on this<a rel="nofollow" href="https://en.wikipedia.org/wiki/Capture_the_flag#Computer_security"> wikipedia link</a>. <br> <br>Thank you.</p>
+                        <ul><li>Click below to view more.</li></ul>
+                        <div class="primary-button">
+                            <a href="./pages/writeups.html">View More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="row">
+
+
+                       
+                        <div class="col-md-6">
+                            <div class="service-item">
+                                <h4>Bandit - OverTheWire</h4>
+                                <div class="line-dec"></div>
+                                <p>The Bandit is a wargame for those who are beginners at Linux/UNIX environment and are facing problems while learning the real-time use of Linux commands.</p>
+                                <div class="primary-button">
+                                    <a href="./pages/bandit.html">View</a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-6">
+                            <div class="service-item">
+                                <h4>TryHackMe</h4>
+                                <div class="line-dec"></div>
+                                <p>TryHackMe is a free online platform for learning cyber security, using hands-on exercises and labs, all through our browser!</p>
+                                <div class="primary-button">
+                                    <a href="./pages/thm.html">View</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="service-item">
+                                <h4>picoCTF</h4>
+                                <div class="line-dec"></div>
+                                <p>picoCTF is a free computer security education program with original content built on a capture-the-flag framework created by security and privacy experts.</p>
+                                <div class="primary-button">
+                                    <a href="./pages/pico.html">View</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="service-item">
+                                <h4>HTB Academy</h4>
+                                <div class="line-dec"></div>
+                                <p>Cyber security training with hands-on exercises and labs made by Hack The Box,
+                                    it helps us to advance our cyber security skills!</p>
+                                <div class="primary-button">
+                                    <a href="./pages/htb-academy.html">View</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="parallax-content projects-content" id="motivation">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="left-text">
+                        <h4>Motivation</h4>
+                        <div class="line-dec"></div>
+                    <div id="owl-testimonials" class="owl-carousel owl-theme">
+                        <div class="item">
+                            <div class="testimonials-item">
+                                <a href="./assets/img/motivation/m-1.jpg" data-lightbox="image-1"><img src="./assets/img/motivation/m-1.jpg" alt=""></a>
+                                
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimonials-item">
+                                <a href="./assets/img/motivation/m-2.jpg" data-lightbox="image-1"><img src="./assets/img/motivation/m-2.jpg" alt=""></a>
+                                
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimonials-item">
+                                <a href="./assets/img/motivation/m-3.jpg" data-lightbox="image-1"><img src="./assets/img/motivation/m-3.jpg" alt=""></a>
+                               
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimonials-item">
+                                <a href="./assets/img/motivation/m-4.png" data-lightbox="image-1"><img src="./assets/img/motivation/m-4.png" alt=""></a>
+                                
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimonials-item">
+                                <a href="./assets/img/motivation/m-5.jpeg" data-lightbox="image-1"><img src="./assets/img/motivation/m-5.jpeg" alt=""></a>
+                                
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimonials-item">
+                                <a href="./assets/img/motivation/m-6.jpg" data-lightbox="image-1"><img src="./assets/img/motivation/m-6.jpg" alt=""></a>
+                                
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimonials-item">
+                                <a href="./assets/img/motivation/m-7.jpeg" data-lightbox="image-1"><img src="./assets/img/motivation/m-7.jpeg" alt=""></a>
+                                
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimonials-item">
+                                <a href="./assets/img/motivation/m-8.jpg" data-lightbox="image-1"><img src="./assets/img/motivation/m-8.jpg" alt=""></a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="tabs-content" id="about-me">
+        <div class="container">
+            
+            <div class="row">
+                <div class="col-md-8 mx-auto">
+                    <div class="left-text">
+                        <h4>About Me</h4>
+                        <div class="line-dec"></div>
+                    <div class="wrapper">
+                        
+                    <section id="first-tab-group" class="tabgroup">
+                      <div id="tab1">
+                        
+                        <!--<img src="img/about-me.jpg" alt="">-->
+                        <p>Hi! I am Siddheswar, just a student having fun with playing CTFs and learning to hack. This site ia an archive of my exploration into cyber security which includes solutions to CTFs and pentesting challenges.
+                            <br><br>If you like my site or have some suggestions or questions then please let me know through your messages.<br><br><br><em>Thank you.</em></p>
+                      </div>
+                    
+                    </section>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="parallax-content contact-content" id="contact-us">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="left-text">
+                        <h4>Get in touch</h4>
+                        <div class="line-dec"></div>
+                    <div class="contact-form">
+                        <div class="row">
+                            <form id="contact" method="post" autocomplete="off" name="google-sheet">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                      <fieldset>
+                                        <input name="first-name" type="text" class="form-control" id="name" placeholder="Your first name..." required=""> 
+                                    </fieldset>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <fieldset>
+                                          <input name="last-name" type="text" class="form-control" id="name" placeholder="Your last name..." required=""> 
+                                      </fieldset>
+                                      </div>
+                                    <div class="col-md-12">
+                                      <fieldset>
+                                        <input name="email" type="email" class="form-control" id="email" placeholder="Your email..." required="">
+                                      </fieldset>
+                                    </div>
+                                    <div class="col-md-12">
+                                      <fieldset>
+                                        <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your message..." required=""></textarea>
+                                      </fieldset>
+                                    </div>
+                                    <div class="col-md-12">
+                                      <fieldset>
+                                        <button type="submit" name="submit" id="form-submit" class="btn" value="Login">Send Message</button>
+                                      </fieldset>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <!--<div class="col-md-6">
+                    <div class="map">
+                    <!-- How to change your own map point
+                           1. Go to Google Maps
+                           2. Click on your location point
+                           3. Click "Share" and choose "Embed map" tab
+                           4. Copy only URL and paste it within the src="" field below
+                    
+
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1197183.8373802372!2d-1.9415093691103689!3d6.781986417238027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdb96f349e85efd%3A0xb8d1e0b88af1f0f5!2sKumasi+Central+Market!5e0!3m2!1sen!2sth!4v1532967884907" width="100%" height="390" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                </div>-->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="primary-button">
+                        <a href="#home">Back To Top</a>
+                    </div>
+                    <!--<ul>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google"></i></a></li>
+                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                    </ul>-->
+                    <p>Copyright &copy; 2021 |
+            
+            		<a rel="nofollow noopener"><em> Siddheswar's Blog</em></a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+    <script src="./assets/js/vendor/bootstrap.min.js"></script>
+    <script src="./assets/js/plugins.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script>
+        function openCity(cityName) {
+            var i;
+            var x = document.getElementsByClassName("city");
+            for (i = 0; i < x.length; i++) {
+               x[i].style.display = "none";  
+            }
+            document.getElementById(cityName).style.display = "block";  
+        }
+    </script>
+
+    <script>
+        $(document).ready(function(){
+          // Add smooth scrolling to all links
+          $(".fixed-side-navbar a, .primary-button a").on('click', function(event) {
+
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+              // Prevent default anchor click behavior
+              event.preventDefault();
+
+              // Store hash
+              var hash = this.hash;
+
+              // Using jQuery's animate() method to add smooth page scroll
+              // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+              $('html, body').animate({
+                scrollTop: $(hash).offset().top
+              }, 800, function(){
+           
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              });
+            } // End if
+          });
+        });
+    </script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyVUsi82hCjiW5SnNCJmK7j68OaV0N7EGqv04BNpIYoXB0xqCK45kXsusbW08SONeQ3/exec'
+    const form = document.forms['google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</body>
+</html>
